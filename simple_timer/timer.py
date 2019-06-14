@@ -10,5 +10,4 @@ class Timer:
         self.t1 = timeit.default_timer()
 
     def __exit__(self, type, value, trace):
-        print(timeit.default_timer() - self.t1)
         print("The overall time of {}: {:3f} secs".format(self.task_name, timeit.default_timer() - self.t1))
